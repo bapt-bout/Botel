@@ -1,0 +1,141 @@
+{% extends "base.html.twig" %}
+
+{% block title %}À propos{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de nous</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/styles/about_style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1369px)" href="../../assets/styles/handset_about.css">
+    <style>
+        @media screen and (max-width: 850px) {
+            .hamburger {
+                display: none;
+                cursor: pointer;
+                padding-top: 8px;
+                padding-bottom: 1.5px;
+                background-color: #000000de;
+            }
+            .bar {
+                display: flex;
+                width: 30px;
+                height: 3px;
+                margin-bottom: 5px;
+                margin-top: 0px;
+                margin-left: 25px;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background-color: rgb(255, 255, 255);
+            }
+            @media screen and (max-width:850px) {
+                .hamburger {
+                    display: block;
+                }
+                .hamburger.active {
+                    background-color: whitesmoke;
+                }
+                .hamburger.active .bar:nth-child(2) {
+                    opacity: 0;
+                }
+                .hamburger.active .bar:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                    background-color: black;
+                }
+                .hamburger.active .bar:nth-child(3) {
+                    transform: translateY(-8px) rotate(135deg);
+                    background-color: black;
+                }
+                .navbar {
+                    display: flex;
+                    position: absolute;
+                    top: -100%;
+                    gap: 0;
+                    background-color: whitesmoke;
+                    width: 100%;
+                    transition: 0.4;
+                }
+                .navbar.active {
+                    padding: 0;
+                    top: 0px;
+                }
+                #logo1 {
+                    left: auto;
+                    display: flex;
+                    align-items: center;
+                    filter: invert();
+                    padding-top: 44px;
+                    padding-right: 12px;
+                }
+                .navbar #navbarmain {
+                    margin-bottom: 95px;
+                }
+                .navbar ul {
+                    display: flex;
+                    align-items: center;
+                    padding-top: 0px;
+                }
+                .navbar #navbarmain li a {
+                    color: black;
+                }
+                .navbar .social ul {
+                    display: flex;
+                }
+                .navbar .social {
+                    display: flex;
+                    top: 21px;
+                }
+                .social #fb,
+                #ig {
+                    filter: none;
+                }
+                .social #lnkd {
+                    filter: none;
+                }
+                .social #git {
+                    filter: none;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    </div>
+    <!-- Frontpage -->
+    <div id="head">
+        Notre brève histoire
+    </div>
+    <div class="content ">
+        <div>
+            <br><br>
+            Lorsque l'hôtelier mexicain Alberto Del Rio a fondé l'Imperial Palace en 1998, il a redéfini la scène de la restauration européenne et ouvert la voie à un nouveau style d'hospitalité moderne, basé sur une idée simple : "faire des choses normales de manière extraordinaire".
+            
+             Visionnaire en son temps, Prager a créé un concept de restaurant basé sur la simplicité, l'innovation, l'engagement envers le service et une passion pour l'excellence culinaire et hôtelière, et le reste, comme on dit, appartient à l'histoire.
+            <br>
+            <br> Depuis lors, nous aimons rester avec notre famille "The Hotel Family", comme nous l'appelons. L'emplacement de notre hôtel est situé dans une zone métropolitaine très agréable, bien équipée de nombreuses installations. <br> Aujourd'hui, notre hôtel est également financé par de grandes entreprises
+            telles que Google, Microsoft, IBM, TATA & TCS. Nous sommes très fiers d'avoir grandi depuis une petite auberge en 1998 jusqu'en 2022 et nous avons l'ambition de prospérer davantage et de devenir l'un des meilleurs hôtels du monde.
+
+        </div>
+        <div class="btn ">
+            <a href="{{ path('home') }}#contact ">
+
+
+                <button>
+                    Contactez-nous
+                </button>
+            </a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+{% endblock %}

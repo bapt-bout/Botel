@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="text-center" style="color: #000;">Inscription</h1>
+            <a href="{{ path('luffy') }}" class="btn btn-warning">Connexion</a>
+        </div>
+
+        {{ form_start(registrationForm) }}
+        <div class="mb-3">
+            {{ form_label(registrationForm.prenom, 'Prénom', {'label_attr': {'style': 'color: #000;'}}) }}
+            {{ form_widget(registrationForm.prenom, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="mb-3">
+            {{ form_label(registrationForm.nom, 'Nom', {'label_attr': {'style': 'color: #000;'}}) }}
+            {{ form_widget(registrationForm.nom, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="mb-3">
+            {{ form_label(registrationForm.pseudo, 'Pseudo', {'label_attr': {'style': 'color: #000;'}}) }}
+            {{ form_widget(registrationForm.pseudo, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="mb-3">
+            {{ form_label(registrationForm.email, 'Email', {'label_attr': {'style': 'color: #000;'}}) }}
+            {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="mb-3">
+            {{ form_label(registrationForm.civilite, 'Civilité', {'label_attr': {'style': 'color: #000;'}}) }}
+            {{ form_widget(registrationForm.civilite, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="mb-3">
+            {{ form_label(registrationForm.plainPassword, 'Mot de passe', {'label_attr': {'style': 'color: #000;'}}) }}
+            {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <button type="submit" class="btn btn-info">S'inscrire</button>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,190 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+      </div>
+        <!-- Frontpage -->
+        <div class="content">
+            L'enchantement de l'élégance !
+            <br>
+            <div id="contentsum1">
+
+                Là où les souvenirs douillets perdurent
+            </div>
+        </div>
+
+    </div>
+    <!-- Kitchen -->
+    <div class="kitchen" id="kitchen">
+        <div id="sum1">Que voulez-vous que nous préparions pour vous ?</div>
+        <div id="intro">Notre restaurant</div>
+        <div id="sum2">
+
+            Goûtez au meilleur de la ville avec la nourriture qui vous attend
+        </div>
+
+        <div class="foodbox">
+            <div class="foodcolumn">
+
+                <div><img src="../../assets/kitchen/food-3.jpg" alt="">
+                    <div class="fooddesc">
+                        Café italien
+                    </div>
+                </div>
+                <div><img src="../../assets/kitchen/food-4.jpg" alt="">
+                    <div class="fooddesc">Curry de poisson avec riz japonais
+                    </div>
+                </div>
+            </div>
+            <div class="foodcolumn">
+                <div><img src="../../assets/kitchen/food-5.jpg" alt="">
+                    <div class="fooddesc">
+                        Salade de fromage avec thé
+                    </div>
+                </div>
+                <div><img src="../../assets/kitchen/food-6.jpg" alt="">
+                    <div class="fooddesc">
+                        Brioche au pudding à la noix de coco
+                    </div>
+                </div>
+            </div>
+            <div class="foodcolumn">
+                <div><img src="../../assets/kitchen/food-7.jpg" alt="">
+                    <div class="fooddesc">
+                        Œuf à la coque et frites
+                    </div>
+                </div>
+                <div><img src="../../assets/kitchen/food-8.jpg" alt="">
+                    <div class="fooddesc">
+                        Riz et aubergines frites
+                    </div>
+                </div>
+            </div>
+
+
+        
+
+
+        </div>
+    </div>
+    <div class="rooms" id="rooms">
+        <div id="rsum1">Que diriez-vous de rester avec nous ?</div>
+        <div id="rintro">Nos chambres</div>
+        <div id="rsum2">
+
+           Le luxe n'est pas un lieu, c'est une expérience.
+        </div>
+        <div class="roomspic" id="r1"><img src="../../assets/rooms/1.jpg" alt="">
+        
+            <div class="rdesc">
+               Profitez de nos élégantes chambres de 40 m², conçues dans des tons chauds et beiges et adaptées aux besoins des voyageurs privés et d'affaires. <br> Toutes les chambres disposent d'une grande salle de bains en marbre, d'un lit double, de la climatisation, d'un espace de travail supplémentaire avec accès gratuit à Internet et d'un placard.
+                accès gratuit à Internet et d'un placard. Les chambres supérieures offrent une vue magnifique sur la ville et le parc adjacent.<br><br> Services supplémentaires : Service en chambre 24 heures sur 24 Peignoir, pantoufles Journal quotidien sur demande
+                <br>
+                <br> Cadeaux de bienvenue : Corbeille de fruits 1 bouteille d'eau minérale Café et thé
+                
+
+
+            </div>
+        </div>
+        <div class="roomspic" id="r2"><img src="../../assets/rooms/2.jpg" alt="">
+            <div class="rdesc" id="rdesc1">
+            <h3>Chambre Classique</h3>
+
+                Il s'agit d'une suite d'une pièce avec un lit queen-size et un coin salon confortable. Elle est située au rez-de-chaussée avec une entrée extérieure et est accessible aux fauteuils roulants. Elle dispose d'une télévision à écran plat de 39 pouces et d'une cheminée électrique.<br><br> La cuisine du majordome
+                (réfrigérateur, micro-ondes, cafetière Keurig). Le café, le thé et les produits d'accueil sont fournis. La grande salle de bains est équipée d'une douche de 60 pouces (pas de baignoire). Dans les années 1900, les hôtels de luxe mettaient à la disposition des vendeurs itinérants des chambres d'échantillons pour qu'ils puissent présenter leurs produits.
+                leurs marchandises. <br><br> Rappelez-vous que le transport se faisait soit par train, soit par cheval et boghei.
+             <div class="btn">
+                    <a href="{{ path('app_chambre') }}"><button>Réservez</button></a>
+                </div>
+
+
+            </div>
+        </div>
+        <div id="r3" class="roomspic"><img src="../../assets/rooms/3.jpg" alt="">
+            <div class="rdesc">
+        <h3>Chambre Confort</h3>
+
+                La chambre Deluxe Twin/Large Double offre également une vue sur les jardins paysagers. Elle dispose d'un coin salon, d'un coffre-fort numérique et d'un mini-réfrigérateur. Cette chambre peut être configurée avec deux lits simples ou avec une fermeture éclair pour former un grand lit double.<br><br>                Ces chambres compactes, les plus petites de notre budget, conviennent à une occupation simple ou à une occupation double de courte durée, car elles disposent d'un espace et d'un rangement limités.<br> <br>Elle dispose de nombreux rangements, d'un coin salon, d'un coffre-fort numérique et d'un mini-réfrigérateur.
+                 <div class="btn">
+                    <a href="{{ path('app_chambre') }}"><button>Réservez</button></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="roomspic" id="r4"><img src="../../assets/rooms/4.jpg" alt="">
+            <div class="rdesc">
+            <h3>Suite de luxe</h3>
+                La chambre standard comprend un lit double ou deux lits jumeaux, deux tables de chevet, un bureau et une chaise. La chambre est dotée de moquette, d'un mobilier tendance et d'un balcon.<br><br> Notre salle de bain ultramoderne en verre est équipée de
+                sèche-cheveux, miroir grossissant pour le rasage et le maquillage, ainsi que de tous les équipements dont vous pourriez avoir besoin pendant votre séjour. <br><br>Une bouteille de vin, des fruits frais et de l'eau minérale sont offerts à l'arrivée. Courant électrique :
+                220 Volts. Des chambres fumeurs et des chambres communicantes sont également disponibles.
+                <div class="btn">
+                    <a href="{{ path('app_chambre') }}"><button>Réservez</button></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About  -->
+    <div class="about" id="about">
+        <div id="asum1">Notre brève histoire</div>
+        <div id="aintro">A propos</div>
+        <div id="asum2">
+
+           Explorez votre destination avec nous. Une grande aventure commence ici.
+        </div>
+        <div class="aboutpic" id="r3"><img src="../../assets/img/about.jpg" alt="">
+            <div class="adesc">
+                Lorsque l'hôtelier mexicain Alberto Del Rio a fondé l'Imperial Palace en 1998, il a redéfini la scène de la restauration européenne et ouvert la voie à un nouveau style d'hospitalité moderne, conçu sur la base d'un principe simple : "faire des choses normales d'une manière extraordinaire".
+                <br><br> Visionnaire de son temps, Prager a créé un concept de restaurant basé sur la simplicité, l'innovation, l'engagement envers le service et la passion pour l'excellence culinaire et l'hospitalité, et le reste, comme on dit, fait partie de l'histoire.
+                <div class="btn">
+                    <a href="{{ path('about') }}" target="_blank"><button id="aboutbtn">Explorez</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us  -->
+    <div class="contact" id="contact">
+        <div id="csum1">Nous sommes disponibles 24h/24 et 7j/7</div>
+        <div id="cintro">Contactez nous</div>
+        <div id="csum2">
+
+            Des questions ou des remarques ? Entamons une conversation
+        </div>
+    </div>
+    <div class="contdata" id="c3">
+       
+    <div id="form">
+    <form type="post" id="myform" action="#">
+        <div class="form-row">
+        <label for="name">Nom :</label>
+        <input type="text" name="uname" id="name" placeholder="Entrez votre nom" required>
+        </div>
+        <div class="form-row">
+        <label for="email">Email :</label>
+        <input type="text" name="umail" id="email" placeholder="Entrez votre mail" required>
+        </div>
+        <div class="form-row">
+        <label for="phone">Téléphone :</label>
+        <input type="number" name="uphone" id="phone" placeholder="Entrez votre téléphone" required>
+        </div>
+        <div class="form-row">
+        <label for="issue">Question :</label>
+        <textarea name="issue" id="issue" placeholder="Ecrivez votre question" required></textarea>
+        </div>
+        <div class="form-row">
+        <button id="btnSubmit" type="submit" value="submit">Envoyer</button>
+        </div>
+    </form>
+    </div>
+
+
+        <div class="cdesc">
+           Notre équipe est disponible dans toutes les villes métropolitaines telles que Paris, Kolkata, Londres, New York, Californie, Islamabad, Dhaka, Moscou, New Delhi, Guwahati, Dubaï, Casino. Vous pouvez nous joindre au +123 456 789 ou nous envoyer un courriel à botel@mail.com.
+
+        </div>
+
+{% endblock %}

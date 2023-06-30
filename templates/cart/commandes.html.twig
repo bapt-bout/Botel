@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes chambres réservées{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center mt-4">Mes chambres réservées</h1>
+
+        {% if commandes is empty %}
+            <div class="alert alert-info" role="alert">
+                Vous n'avez réservé aucune chambre.
+            </div>
+        {% else %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Numéro</th>
+                        <th>Date d'arrivée</th>
+                        <th>Date de départ</th>
+                        <th>Date d'enregistrement</th>
+                        <th>Chambre</th>
+                        <th>Prix journalier</th>
+                        <th>Nombre de Chambres</th>
+                        <th>Prix total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for commande in commandes %}
+                        <tr>
+                            <td>{{ commande.id }}</td>
+                            <td>{{ commande.dateArrivee|date('d/m/Y') }}</td>
+                            <td>{{ commande.dateDepart|date('d/m/Y') }}</td>
+                            <td>{{ commande.dateEnregistrement|date('d/m/Y') }}</td>
+                            <td>{{ commande.chambre.titre }}</td>
+                            <td>{{ commande.chambre.prixJournalier / 100|number_format() }} €</td>
+                            <td>{{ commande.quantity }}</td>
+                            <td>{{ commande.montant / 100|number_format() }} €</td>
+                            <td>{{ commande.prixTotal / 100|number_format() }} €</td>
+                           
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+{% endblock %}

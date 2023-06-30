@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Nos chambres{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <img src="{{ asset('uploads/photos/' ~ chambre.photo) }}" alt="image" class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title">{{ chambre.titre }}, Prix: {{ chambre.prixJournalier / 100 }}€</h2>
+                    <div class="metadata">Date de la chambre: {{ chambre.dateEnregistrement|date('d/m/Y à H:i:s') }}</div>
+                    <div class="card-text">{{ chambre.descriptionCourte|raw }}</div>
+                    <div class="card-text">{{ chambre.descriptionLongue|raw }}</div>
+                    <form action="{{ path('cart_add', {id: chambre.id}) }}" method="post">
+                        <div class="form-group">
+                            <label for="dateArrivee">Date d'arrivée</label>
+                            <input type="date" id="dateArrivee" name="dateArrivee" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateDepart">Date de départ</label>
+                            <input type="date" id="dateDepart" name="dateDepart" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Réserver la chambre</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

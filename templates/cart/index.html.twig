@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réservations{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="text-center mt-4">Vos réservations</h1>
+
+    
+        {% if items %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Chambre</th>
+                        <th>Description</th>
+                        <th>Photo</th>
+                        <th>Prix</th>
+                        <th>Quantité</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <td>{{ item.chambre.titre }}</td>
+                            <td>{{ item.chambre.descriptionCourte|raw }}</td>
+                            <td>
+                                <img src="{{ asset('uploads/photos/' ~ item.chambre.photo) }}"
+                                     alt="{{ item.chambre.titre }}"
+                                     class="img-fluid"
+                                     style="max-width: 100px; max-height: 100px;">
+                            </td>
+                            <td>{{ item.chambre.prixJournalier / 100|number_format() }} €</td>
+                            <td>{{ item.quantity }}</td>
+                            
+                            <td>{{ item.chambre.prixJournalier * item.quantity / 100|number_format() }} €</td>
+                            <td>
+                                <a href="{{ path('cart_remove', {id: item.chambre.id}) }}" class="btn btn-sm btn-danger">x</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h5 class="text-end">Montant total : {{ montant / 100|number_format() }} €</h5>
+            <a href="{{ path('validation_commande') }}" class="btn btn-primary">Valider la réservation</a>
+        {% else %}
+            <p>Vous n'avez pas réserver de chambre</p>
+        {% endif %}
+</div>
+{% endblock %}
+
+
